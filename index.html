@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Password Strength Checker</title>
+	</head>
+	<body class="center">
+		<div class="container">
+			<div class="speedometer__con center">
+				<div class="speedometer__wrapper">
+					<div class="speedometer center">
+						<div class="speedometer__guage">
+							<div class="guage__shadow"></div>
+						</div>
+					</div>
+
+					<div class="speedometer__shadow"></div>
+
+					<div id="hand-wrapper" class="hand__wrapper" style="--score: 0;">
+						<div class="hand__shadow"></div>
+            
+						<div class="meter__hand"></div>
+					</div>
+          
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</div>
+
+			<div data-strength="" id="input-con" class="input__con">
+				<div class="wrapper">
+					<h1>Password Checker</h1>
+
+					<div id="input-wrapper" data-type="password" class="input__wrapper">
+						<input
+							type="password"
+							name="password"
+							id="password"
+							oninput="checkPwdStrength()"
+							placeholder="Enter password"
+						/>
+
+						<input
+							type="text"
+							name="text"
+							id="text"
+							placeholder="Enter password"
+						/>
+
+						<button onclick="switchType()" class="switcher">
+							<div class="half">
+								<span></span>
+							</div>
+
+							<div class="half"></div>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
